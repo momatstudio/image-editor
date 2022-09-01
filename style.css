@@ -165,6 +165,7 @@ button {
     margin-top: 20px;
   }
   .container .main .adjustments .rotate {
+    margin-top: 20px;
     width: 100%;
     height: fit-content;
   }
