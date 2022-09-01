@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container disable">
+      <div class="header">
+        <h2>Web Picture Editor</h2>
+      </div>
+      <div class="main">
+        <div class="adjustments">
+          <div class="row">
+            <div class="title"><span>Filters</span></div>
+            <div class="buttons filter-buttons">
+              <button id="brightness" class="focus">Brightness</button>
+              <button id="saturation">Saturation</button>
+              <button id="inversion">Inversion</button>
+              <button id="grayscale">Grayscale</button>
+            </div>
+            <br />
+            <div class="adjust-selected-filter">
+              <div class="filter-name">
+                <span class="selected-filter">Brightness</span>
+                <span class="filter-value">100%</span>
+              </div>
+              <input type="range" value="100" min="0" max="200" />
+            </div>
+          </div>
+          <!-- <br /> -->
+          <div class="row rotate">
+            <div class="title">Rotate & Flip</div>
+            <div class="buttons rotate-buttons">
+              <button id="rotate-anti-clock-wise">R-A</button>
+              <button id="rotate-clock-wise">R-C</button>
+              <button id="flip-horizontally">F-H</button>
+              <button id="flip-vertically">F-V</button>
+            </div>
+          </div>
+        </div>
+        <div class="image">
+          <div class="image-wrap">
+            <img
+              src="no-image-icon-19-copy.jpg"
+              alt="mean-stack-vs-mern-stackpx "
+              height="100%"
+              style="
+                filter: brightness(100%) saturate(100%) invert(0%) grayscale(0%);
+              "
+            />
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <button class="reset-filters">RESET FILTERS</button>
+        <div class="image-actions">
+          <input type="file" class="file-input" accept="image/*" hidden />
+          <button class="choose-image">CHOOSE IMAGE</button>
+          <button class="save-image focus">SAVE IMAGE</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
